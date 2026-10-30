@@ -1,4 +1,4 @@
-/* General Styles */
+
 
 * {
     margin: 0;
@@ -18,7 +18,6 @@ body {
 }
 
 
-/* Navigation Bar */
 
 header {
     background-color: #FFFFFF;
@@ -42,14 +41,12 @@ header {
 
 .nav-links {
     display: flex;
-    list-style: none;
     gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333333;
-    font-size: 15px;
 }
 
 .nav-links a:hover {
@@ -57,12 +54,10 @@ header {
 }
 
 
-/* Home Section */
 
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 40px;
     padding: 70px 7%;
 }
@@ -81,17 +76,29 @@ header {
 
 .hero h1 {
     color: #315C4C;
-    font-size: 42px;
+    font-size: 40px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.description {
-    font-size: 16px;
-    margin-bottom: 25px;
+.hero-text p {
+    margin-bottom: 20px;
 }
 
-.btn {
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.button {
     display: inline-block;
     background-color: #315C4C;
     color: #FFFFFF;
@@ -103,28 +110,16 @@ header {
     cursor: pointer;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #244438;
 }
 
-.hero-image {
-    width: 50%;
-}
 
-.hero-image img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-
-/* About Section */
 
 .about {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 45px;
     padding: 70px 7%;
     background-color: #FFFFFF;
 }
@@ -135,7 +130,7 @@ header {
 
 .about-image img {
     width: 100%;
-    height: 350px;
+    height: 330px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -146,7 +141,7 @@ header {
 
 .about-text h2 {
     color: #315C4C;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -154,20 +149,7 @@ header {
     margin-bottom: 15px;
 }
 
-.text-link {
-    display: inline-block;
-    color: #315C4C;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
 
-.text-link:hover {
-    color: #C98768;
-}
-
-
-/* Services Section */
 
 .services {
     padding: 70px 7%;
@@ -191,26 +173,26 @@ header {
 }
 
 .service-card {
-    background-color: #FFFFFF;
-    padding: 30px;
     flex: 1;
+    background-color: #FFFFFF;
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-.service-icon {
-    color: #C98768;
-    font-size: 32px;
-    margin-bottom: 15px;
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.service-card h3 {
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
     color: #315C4C;
     margin-bottom: 12px;
-}
-
-.service-card p {
-    font-size: 15px;
 }
 
 .service-card:hover {
@@ -218,7 +200,6 @@ header {
 }
 
 
-/* Why Choose Us Section */
 
 .why-us {
     background-color: #E8EFE9;
@@ -227,7 +208,7 @@ header {
 
 .features {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     text-align: center;
 }
 
@@ -242,7 +223,6 @@ header {
 }
 
 
-/* Contact Section */
 
 .contact {
     display: flex;
@@ -251,7 +231,8 @@ header {
     background-color: #FFFFFF;
 }
 
-.contact-text {
+.contact-text,
+.contact-form {
     width: 50%;
 }
 
@@ -262,7 +243,6 @@ header {
 }
 
 .contact-form {
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -273,6 +253,7 @@ header {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
     padding: 12px;
     margin-bottom: 18px;
@@ -286,12 +267,11 @@ header {
     resize: vertical;
 }
 
-.contact-form .btn {
+.contact-form .button {
     align-self: flex-start;
 }
 
 
-/* Footer */
 
 footer {
     background-color: #315C4C;
@@ -305,17 +285,12 @@ footer .logo {
     margin-bottom: 10px;
 }
 
-footer .logo span {
-    color: #E6B49C;
-}
-
 .copyright {
     font-size: 13px;
     margin-top: 20px;
 }
 
 
-/* Mobile Responsive Design */
 
 @media (max-width: 768px) {
 
@@ -350,22 +325,12 @@ footer .logo span {
     }
 
     .hero-image img {
-        height: 300px;
-    }
-
-    .about-text h2,
-    .contact-text h2,
-    .section-heading h2 {
-        font-size: 27px;
+        height: 280px;
     }
 
     .service-container,
     .features {
         flex-direction: column;
-    }
-
-    .service-card {
-        width: 100%;
     }
 
     .hero,
